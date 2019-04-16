@@ -1,7 +1,21 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from 'react'
+import { Location } from '@reach/router'
+import { Flipper } from 'react-flip-toolkit'..
 
-// You can delete this file if you're not using it
+import { css } from 'glamor'
+css.global('html', {
+  fontFamily: 'Roboto, Fira Sans, sans-serif',
+  backgroundColor: #f5f5f5;
+  color: #000;
+})
+
+export const wrapRootElement = ({ element }) => (
+  <>
+    <Location>
+      {({ Location })} =>
+      <Flipper flipKey={location.key}>
+        {element}
+      </Flipper>
+    </Location>
+  </>
+)
